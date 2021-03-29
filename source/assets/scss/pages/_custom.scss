@@ -1,0 +1,249 @@
+$color1: #F6A62D;
+$color2: #C8CBD2;
+$color3: #CBDCFF;
+$color4: #AEC8FF;
+$color5: #B9E0C7;
+$color6: #A6E6B8;
+$color7: #DFF6E5;
+$color8: #E2E8F5;
+$color9: #5EBC77;
+$color10: #4463AA;
+$color11: #94EDAC;
+$color12: #7495E0;
+
+.contBr01 {
+    border: 2px solid $color1;
+}
+
+.contBg02 {
+    background-color: $color2;
+}
+
+.contBg03 {
+    background-color: $color3;
+}
+
+.contBg04 {
+    background-color: $color4;
+}
+
+.contBg05 {
+    background-color: $color5;
+}
+
+.contBg06 {
+    background-color: $color6;
+}
+
+.contBg07 {
+    background-color: $color7;
+}
+
+.contBg08 {
+    background-color: $color8;
+}
+
+.contBg09 {
+    background-color: $color9;
+}
+
+.contBg10 {
+    background-color: $color10;
+}
+
+.contBg11 {
+    background-color: $color11;
+}
+
+.contBg12 {
+    background-color: $color12;
+}
+
+.imgW90 {
+    width: 90%; 
+}
+
+@media screen and (max-width: 768px) {
+    .imgW90 {
+        width: 100%; 
+    }
+}
+
+.hr01 {
+    border-top: 3px solid $color6;
+}
+
+.list01 {
+    list-style: none;
+  }
+  
+.list01 li::before {
+content: "\00BB";
+color: $color1;
+font-weight: bold;
+display: inline-block; 
+width: 1em;
+margin-left: -1em;
+}
+
+.contD01B {
+    padding: 16px;
+    border-bottom: 2px dashed $color5;
+}
+
+.contD01T {
+    padding: 16px;
+    border-bottom: 2px dashed $color5;
+}
+
+.contE01R {
+    width: inherit;
+    height: 50%;
+    border-right: 2px dashed $color5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.contE01L {
+    width: inherit;
+    height: 50%;
+    border-left: 2px dashed $color5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.contI01 {
+    margin: -11px;
+}
+
+@media screen and (max-width: 768px) {
+    .contD01T {
+        border: none;
+        border-top: 2px dashed $color5;
+    }
+
+    .contE01L {
+        top: 0px;
+    }
+
+    .contI01 {
+        margin: 0px;
+        margin-left: -11px;
+        margin-right: -11px;
+    }
+}
+
+.H100 {
+    height: 100%;
+}
+
+.sub-title-line {
+    
+    h2, h3 {
+        overflow: hidden;
+    }
+
+    h2::after, h3::after {
+        content: "";
+        display: inline-block;
+        height: 0.5em;
+        vertical-align: bottom;
+        width: 100%;
+        margin-right: -100%;
+        margin-left: 10px;
+        border-top: 1px solid orange;
+    }
+}
+
+.imgInfo {
+    width: 164px;
+    height: 164px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .imgInfo {
+        position: absolute;
+        right: 50%;
+        top: -100%;
+        transform: translateX(50%);
+    }
+}
+
+//slider - btn down
+
+.cont-btn {
+    background-color: $color3;
+    width: 100%;
+    height: 50px;
+    position: relative;
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 30px;
+        width: 30px;
+        background-color: rgba(2, 0, 134, 0.3);
+        background-size: 50%, 50%;
+        border-radius: 50%;
+    }
+}
+
+.cont-ind {
+    li {
+        height: 6px !important;
+    }
+}
+
+// --------
+
+.indContWL::before {
+    content: '';
+    height: 25px;
+    width: 25px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    border-style: solid;
+    border-width: 25px;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 20;
+}
+
+.indContWR::before {
+    content: '';
+    height: 25px;
+    width: 25px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    border-style: solid;
+    border-width: 25px;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 0;
+    z-index: 20;
+}
+
+@media screen and (max-width: 768px) {
+    .indContWL::before {
+        border-color: white transparent transparent transparent;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .indContWR::before {
+        border-color: transparent transparent white transparent;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
